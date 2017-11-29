@@ -11,11 +11,8 @@ public class Main
 
     public static void main(String[] args)
     {
-        //int a = getInt();
-        //int b = getInt();
         double a = getDouble();
         double b = getDouble();
-        
      //  double a = 1.5555;
      //  double b = 1.1111;
         char mo = getOperation();
@@ -32,7 +29,6 @@ public class Main
         //num = scan.nextInt();
         num = scan.nextDouble();
         return num;
-
     }
 
     public static char getOperation()
@@ -42,31 +38,6 @@ public class Main
         mo = scan.next().charAt(0);
         return mo;
     }
-/*
-    public static int calc(int num1, int num2, char mo)
-    {
-        int result;
-        switch (mo)
-        {
-            case '+':
-                result = num1 + num2;
-                break;
-            case '-':
-                result = num1 - num2;
-                break;
-            case '/':
-                result = num1 / num2;
-                break;
-            case '*':
-                result = num1 * num2;
-                break;
-            default:
-                System.out.println("Введите тип операции: + сложение, - вычетание, / деление, * умножение");
-                result = calc(num1, num2, getOperation());
-        }
-        return result;
-     }
-     */
 
     public static double calc(double num1, double num2, char mo)
     {
