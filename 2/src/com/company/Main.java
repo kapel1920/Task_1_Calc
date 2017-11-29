@@ -2,10 +2,13 @@ package com.company;
 
 import java.math.RoundingMode;
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main
 {
+    private static DecimalFormat df4 = new DecimalFormat(".####");
+
     //Ввод данных
     static Scanner scan = new Scanner(System.in);
 
@@ -13,20 +16,15 @@ public class Main
     {
         double a = getDouble();
         double b = getDouble();
-     //  double a = 1.5555;
-     //  double b = 1.1111;
         char mo = getOperation();
-        double c = calc(a, b, mo);
-        // int c = calc (a, b, mo);
-        System.out.println("Результат операции: " + c);
+        double result = calc(a, b, mo);
+        System.out.println("Результат операции: " + df4.format(result));
     }
 
     public static double getDouble()
     {
         System.out.println("Введите число:");
-        // int num;
         double num;
-        //num = scan.nextInt();
         num = scan.nextDouble();
         return num;
     }
@@ -59,7 +57,6 @@ public class Main
             default:
                 System.out.println("Введите тип операции: + сложение, - вычетание, / деление, * умножение");
                 result = calc(num1, num2, getOperation());
-              /*  String.format("%.2f", result);*/
         }
         return result;
     }
