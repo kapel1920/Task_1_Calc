@@ -7,11 +7,13 @@ import java.util.Scanner;
 
 public class Main
 {
+    //Округление до 4-х знаков после запятой
     private static DecimalFormat df4 = new DecimalFormat(".####");
 
     //Ввод данных
     static Scanner scan = new Scanner(System.in);
 
+    //Основная функция
     public static void main(String[] args)
     {
         double a = getDouble();
@@ -21,6 +23,7 @@ public class Main
         System.out.println("Результат операции: " + df4.format(result));
     }
 
+    //Ввод чисел
     public static double getDouble()
     {
         System.out.println("Введите число:");
@@ -29,14 +32,16 @@ public class Main
         return num;
     }
 
+    //Ввод операции
     public static char getOperation()
     {
-        System.out.println("Введите операцию:");
+        System.out.println("Введите операцию (+, -, /, *) ");
         char mo;
         mo = scan.next().charAt(0);
         return mo;
     }
 
+    //Расчет
     public static double calc(double num1, double num2, char mo)
     {
         double result;
